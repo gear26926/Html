@@ -8,70 +8,96 @@
 
 <style>
     .lines{
-        border-top:1px solid black;
-        padding-top: 10px;
+            border-top:1px solid black;
+            padding-top: 10px;
     }
+
+    input {
+	        border-top-style: none;
+	        border-right-style: none;
+	        border-bottom-style: solid;
+	        border-left-style: none;
+	        border-color: black;
+            background-color:lightgray;
+	        }
+
+    .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+           }  
+           
+     .column1 {
+            float: right;
+            width: 70%;
+            
+        }      
+
 </style>
 
 </head>
 <body>
 <h2 style= "text-align:right; margin-right:100px"> Patient Registration Form </h2>
    
-<form style="border:2px solid black;padding-top:10px;padding-bottom:10px;padding-left:10px; padding-right:10px; margin-left:100px; 
-margin-right:100px">
+<form style="border:2px solid black;
+            padding-top:10px;
+            padding-bottom:10px;
+            padding-left:10px; 
+            padding-right:10px; 
+            margin-left: 50px;
+            margin-right: 50px;">
 
-            
             <div>
-            <label> Patient's Name (Last, First, MI): </label>
-            <input type="text" id="PName" name="PName">
+            <label for="PatName"> Patient's Name (Last, First, MI): </label>
+            <input type="text" id="PatName" name="PatName">
             </div>
             <br>
             <div>
-                <label> Patient's Home Phone Number: </label>
-                <input type="text" id="PhoneNumber" name="PhoneNumber">  
+                <label for="PatHmPhNumber" > Patient's Home Phone Number: </label>
+                <input type="text" id="PatHmPhNumber" name="PatHmPhNumber">  
             
-                <label> Alternate Phone Number (</label>
-                <input type="checkbox" id="Cell" name="Cell">
-                <label for="AltPnumber">Cell</label>
-                <input type="checkbox" id="Work" name="Work">
-                <label for="AltPnumber">Work):</label>
+                <label for="AltPhNumber"> Alternate Phone Number (</label>
+                <input type="radio" id="AltPhNumber_Cell" name="AltPhNumber" value="Yes">
+                <label for="AltPnumber_Cell">Cell</label>
+                <input type="radio" id="AltPhNumber_Work" name="AltPhNumber" value="Yes">
+                <label for="AltPnumber_Work">Work):</label>
                 <input type="text" id="AltPnumber" name="AltPnumber">
             </div>
             <br>
 
                 <div class="lines">
-                    <label> Email Address: </label>
-                    <input type="text" id="Email" name="Email">
+                    <label for="email"> Email Address: </label>
+                    <input type="text" id="email" name="email">
                     </div>
                 <br>
                    
                 <div class="lines">
-                    <label> Address: </label>
-                    <input type="text" id="Address" name="Address">
-                    <label> Apt # </label>
-                    <input type="text" id="Apt" name="Apt">
+                    <label for="address"> Address: </label>
+                    <input type="text" id="address" name="address">
+                    <label form="apt"> Apt. # </label>
+                    <input type="text" id="apt" name="apt">
                 </div> 
                 <br>
 
                 <div>
-                    <label> City: </label>
-                    <input type="text" id="City" name="City">
-                    <label> State: </label>
-                    <input type="text" id="State" name="State">
-                    <label> Zip </label>
-                    <input type="text" id="Zip" name="Zip">
+                    <label for="city"> City: </label>
+                    <input type="text" id="city" name="city">
+                    <label form="state"> State: </label>
+                    <input type="text" id="state" name="state">
+                    <label form="zip"> Zip </label>
+                    <input type="text" id="zip" name="zip">
                 </div> 
                 <br>
                 
                 <div class="lines">
                     <label for="DOB"> Date of Birth: </label>
-                    <input type="date" id="DOB" name="DOB">
+                    <input type="text" id="DOB" name="DOB">
                     <label for="Age"> Age: </label>
                     <input type="number" id="Age" name="Age">
                     <label for="Sex"> Sex </label>
-                    <input type="radio" id="Sex" name="Sex" value="M">
+                    <input type="radio" id="Sex" name="Sex" value="Yes">
                     <label for="Male">M</label>
-                    <input type="radio" id="Sex" name="Sex" value="F">
+                    <input type="radio" id="Sex" name="Sex" value="Yes">
                     <label for="FeMale">F</label>
                     <label for="SSN"> Social Security Number: </label>
                     <input type="text" id="SSN" name="SSN">
@@ -79,35 +105,39 @@ margin-right:100px">
                 <br>
                 
                 <div class="lines">
-                    <label> Marital Status: </label>
-                    <input type="checkbox" id="MS" name="MS"> 
-                    <label for="MS">Married</label>
-                    <input type="checkbox" id="MS" name="MS"> 
-                    <label for="MS">Single</label>
-                    <input type="checkbox" id="MS" name="MS"> 
-                    <label for="MS">Divorced</label>
-                    <input type="checkbox" id="MS" name="MS"> 
-                    <label for="MS">Widowed</label>
+                    <label for="MS"> Marital Status: </label>
+                    <input type="radio" id="MS_Married" name="MS" value="yes"> 
+                    <label for="MS_Married">Married</label>
+                    <input type="radio" id="MS_Single" name="MS" value="yes"> 
+                    <label for="MS_Single">Single</label>
+                    <input type="radio" id="MS_Divorced" name="MS" value="yes"> 
+                    <label for="MS_Divorced">Divorced</label>
+                    <input type="radio" id="MS_Widowed" name="MS" value="yes"> 
+                    <label for="MS_Widowed">Widowed</label>
                 </div>
                 <br>
                 
                 <div class="lines">
+                    
                     <label for="PatEmployer"> Patient's Employer: </label>
                     <input type="text" id="PatEmployer" name="PatEmployer">
-                    <label> Employment Status: </label>
-                    <input type="checkbox" id="EmpStatus" name="EmpStatus"> 
-                    <label for="EmpStatus">Full Time</label>
-                    <input type="checkbox" id="EmpStatus" name="EmpStatus"> 
-                    <label for="EmpStatus">Part Time</label>
-                    <input type="checkbox" id="EmpStatus" name="EmpStatus"> 
-                    <label for="EmpStatus">Unemployed</label>
-                    <input type="checkbox" id="EmpStatus" name="EmpStatus"> 
-                    <label for="EmpStatus">Retired</label>
-                    <input type="checkbox" id="EmpStatus" name="EmpStatus"> 
-                    <label for="EmpStatus">Student</label>
-                    <input type="checkbox" id="EmpStatus" name=""EmpStatus> 
-                    <label for="EmpStatus">Other</label>
+                    <br>
+                  <div class="column1"> 
+                    <label for="EmpStatus"> Employment Status: </label>
+                    <input type="radio" id="EmpStatus_FT" name="EmpStatus" value="yes"> 
+                    <label for="EmpStatus_FT">Full Time</label>
+                    <input type="radio" id="EmpStatus_PT" name="EmpStatus" value="yes"> 
+                    <label for="EmpStatu_PT">Part Time</label>
+                    <input type="radio" id="EmpStatus_Un" name="EmpStatus" value="yes"> 
+                    <label for="EmpStatus_Un">Unemployed</label>
+                    <input type="radio" id="EmpStatus_Ret" name="EmpStatus" value="yes"> 
+                    <label for="EmpStatus_Ret">Retired</label>
+                    <input type="radio" id="EmpStatus_Student" name="EmpStatus" value="yes"> 
+                    <label for="EmpStatus_Student">Student</label>
+                    <input type="radio" id="EmpStatus_Other" name="EmpStatus" value="yes"> 
+                    <label for="EmpStatus_Other">Other</label>
                     <input type="text" id="EmpStatus" name="EmpStatus">
+                    </div>
                 </div>
                 <br>
                 
@@ -131,24 +161,29 @@ margin-right:100px">
                 <h4> Insurance Information </h4>
                 
 
-                <div>
+                <div class="column">
                     <label for="PrimeInsurance"> Primary Insurance: </label>
                     <input type="text" id="PrimeInsurance" name="PrimeInsurance">
-                    <label for="SecInsurance"> Secondary Insurance: </label>
-                    <input type="text" id="SecInsurance" name="SecInsurance">
+                    <br>
+
+                    <label for="SuborPolHolder"> Patient is Subscriber/Policy Holder </label>
+                    <input type="radio" id="SuborPolHolder" name="SuborPolHolder" value="yes">
+                    <label for="SuborPolHolder">Y</label>
+                    <input type="radio" id="SuborPolHolder" name="SuborPolHolder" value="yes">
+                    <label for="SuborPolHolder">N</label> 
+                    <br> 
+
                 </div>
                 <br>
                 <div>
-                        <label for="SuborPHolder"> Patient is Subscriber/Policy Holder </label>
-                        <input type="radio" id="SuborPHolder" name="SuborPHolder" value="Y">
-                        <label for="Yes">Y</label>
-                        <input type="radio" id="SuborPHolder" name="SuborPHolder" value="F">
-                        <label for="No">N</label>
-                        <label for="SuborPHolder"> Patient is Subscriber/Policy Holder </label>
-                        <input type="radio" id="SuborPHolder" name="SuborPHolder" value="Y">
-                        <label for="Yes">Y</label>
-                        <input type="radio" id="SuborPHolder" name="SuborPHolder" value="F">
-                        <label for="No">N</label>
+                    <label for="SecInsurance"> Secondary Insurance: </label>
+                    <input type="text" id="SecInsurance" name="SecInsurance">
+                     <br>   
+                        <label for="SecInsSuborPHolder"> Patient is Subscriber/Policy Holder </label>
+                        <input type="radio" id="SecInsSuborPHolder" name="SecInsSuborPHolder" value="yes">
+                        <label for="SecInsSuborPHolder">Y</label>
+                        <input type="radio" id="SecInsSuborPHolder" name="SecInsSuborPHolder" value="yes">
+                        <label for="SecInsSuborPHolder">N</label>
                 </div>
                 </div>
                 <br>
@@ -157,10 +192,10 @@ margin-right:100px">
                 <h4> INSURED INFORMATION (IF OTHER THAN PATIENT) - We will request to scan your ID and insurance card </h4>
                 
                 <div>
-                        <label for="SuborPHolder"> Subscriber/Policy Holder: </label>
-                        <input type="text" id="SuborPHolder" name="SuborPHolder">
-                        <label for="ReltoPat"> Relationship to Patient: </label>
-                        <input type="text" id="ReltoPat" name="ReltoPat">
+                        <label for="SuborPHolder2"> Subscriber/Policy Holder: </label>
+                        <input type="text" id="SuborPHolder2" name="SuborPHolder2">
+                        <label for="ReltoPat2"> Relationship to Patient: </label>
+                        <input type="text" id="ReltoPat2" name="ReltoPat2">
                 </div>
                 <br>
 
@@ -178,7 +213,7 @@ margin-right:100px">
 
                  <div>
                     <label for="SubDOB"> Date of Birth: </label>
-                    <input type="date" id="SubDOB" name="SubDOB">
+                    <input type="text" id="SubDOB" name="SubDOB">
                 </div>
                 <br>
 
@@ -193,8 +228,6 @@ margin-right:100px">
 
                 <div class="lines">
                 <h4> RELEASE OF INFORMATION </h4>
-                
-
                 <div>
                 <h4> I hereby give you permission to the person(S) listed below to receive information about the care of the 
                     above named patient. </h4>   
@@ -212,21 +245,17 @@ margin-right:100px">
 
                 <div class="lines">
                 <h4> Innova Medical Group reserves the right to charge a fee for any scheduled visits that are :</h4>   
-                
-
                 <ol>
                         <li>Cancelled with less than 24 hours notice</li>
                         <li>Are missed without calling to cancel (no show)</li>
                 </ol>
                 
                  <p> Cancellation Fee Schedule : New Patient $50.00: Established Patient: $35.00 </p>
-
-
                 <div> 
-                    <label for="Sign"> Patient/Parent Or Guardian Signature: </label>
-                    <input type="text" id="Sign" name="sign">
-                    <label for="Date"> Date : </label>
-                    <input type="date" id="Date" name="Date">
+                    <label for="PatSign"> Patient/Parent Or Guardian Signature: </label>
+                    <input type="text" id="PatSign" name="PatSign">
+                    <label for="SignDate"> Date : </label>
+                    <input type="text" id="SignDate" name="SignDate">
 
                 </div>
             </div>
